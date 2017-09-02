@@ -3,9 +3,8 @@ title: "R for Data Science"
 output: html_notebook
 ---
 
-Notes and exercises from [[R for Data Science book from Grolemund and Wickham | http://r4ds.had.co.nz/]]
-
-[[https://rfordatascience.slack.com/messages/C6UC1V0TE/| Sklack]]
+1. Notes and exercises from [R for Data Science book from Grolemund and Wickham]( http://r4ds.had.co.nz/)
+1. [Slack](https://rfordatascience.slack.com/)
 
 # Index
 
