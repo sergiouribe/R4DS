@@ -1,12 +1,19 @@
 ---
 title: "R for Data Science"
-output: html_notebook
+output: 
+  html_notebook: 
+    toc: yes
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
 ---
 
 1. Notes and exercises from [R for Data Science book from Grolemund and Wickham]( http://r4ds.had.co.nz/)
 1. [Slack](https://rfordatascience.slack.com/)
 
-# Index
+# [Curriculum](https://docs.google.com/document/d/1HWpqJJLEHoZW-edJuDH0WWxZbKltZG95Wx6uwXPK0so/edit)
+
+
 
 | Week | Theme         | Sections       |
 |------|---------------|----------------|
@@ -24,4 +31,13 @@ output: html_notebook
 | 12   |               |                |
 | 13   | Communication | 27, 28, 29, 30 |
 | 14   | Proyects      |                |
-  
+
+# Explore
+
+# Wrangle
+
+# Program
+
+# Model
+
+# Communication
