@@ -34,6 +34,62 @@ output:
 
 # Explore
 
+```{r packages, eval=FALSE}
+library(tidyverse)
+```
+
+```{r dataset registrations}
+registrations <- read_csv("./datasets/registrations.csv")
+```
+```{r glimpse of registrations}
+glimpse(registrations)
+```
+```{r summary of registrations}
+summary(registrations)
+```
+```{r explore registrations}
+registrations %>% 
+        filter(`Are you signing up as a learner or as a mentor?` == "Learner") %>%
+        ggplot(aes(x = `How comfortable are you with data analysis and/or statistics?`)) + 
+        geom_bar() + 
+        labs(title = "Learners")
+
+
+```
+
+```{r mentors}
+registrations %>% 
+        filter(`Are you signing up as a learner or as a mentor?` == "Mentor") %>%
+        ggplot(aes(x = `How comfortable are you with data analysis and/or statistics?`)) + 
+        geom_bar() + 
+        labs(title = "Mentors")
+```
+
+
+```{r geocoded }
+library(forcats)
+library(magrittr)
+library(scales)
+library(ggmap) 
+locations <-  registrations %>%
+        select(`Where will you be joining us from? (City, State/Province, Country)`) %>%
+        separate(`Where will you be joining us from? (City, State/Province, Country)`,
+           into = c("first", "second"),
+           sep = " and ",                               
+           remove = FALSE) %>% 
+        select(location = first) %>% # some people entered e.g. "UK and Switzerland", will take the first one
+        mutate(location = ifelse(location == "" | is.na(location), "Missing", location))
+
+geocoded <-  geocode(locations$location, output = "more", source = 'dsk')
+```
+
+```{r}
+geocoded %>% 
+        select(country) %>% 
+        
+```
+
+
 # Wrangle
 
 # Program
